@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+
+# Webdriver
+msedgedriver.exe
+
+# Data Exports
+*.xlsx
+*.pdf
+*.csv
+
+# Build & Distribution
+dist/
+build/
+*.spec
