@@ -41,7 +41,7 @@ except ImportError:
 class JobFinderApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Job Finder - Lowongan IT")
+        self.root.title("Job Finder - Pencari Lowongan Kerja")
         self.root.geometry("1400x850")
         self.root.state('zoomed') if os.name == 'nt' else self.root.attributes('-zoomed', True)
         
@@ -56,7 +56,7 @@ class JobFinderApp:
         # Header
         header_frame = ttk.Frame(self.root)
         header_frame.pack(fill='x', padx=20, pady=10)
-        ttk.Label(header_frame, text="🎯 Job Finder - Lowongan IT di Solo", font=('Arial', 24, 'bold')).pack()
+        ttk.Label(header_frame, text="🎯 J-Finder", font=('Arial', 24, 'bold')).pack()
         
         # Control frame
         control_frame = ttk.LabelFrame(self.root, text="Pencarian", padding=20)
@@ -319,7 +319,7 @@ class JobFinderApp:
         filename = filedialog.asksaveasfilename(
             defaultextension=".xlsx",
             filetypes=[("Excel", "*.xlsx")],
-            initialname=f"lowongan_solo_{datetime.now().strftime('%Y%m%d')}.xlsx"
+            initialname=f"lowongan_{datetime.now().strftime('%Y%m%d')}.xlsx"
         )
         if filename:
             df = pd.DataFrame(self.jobs)
@@ -334,7 +334,7 @@ class JobFinderApp:
         filename = filedialog.asksaveasfilename(
             defaultextension=".pdf",
             filetypes=[("PDF", "*.pdf")],
-            initialname=f"lowongan_it_solo_{datetime.now().strftime('%Y%m%d')}.pdf"
+            initialname=f"lowongan_it_{datetime.now().strftime('%Y%m%d')}.pdf"
         )
         
         if not filename: return
